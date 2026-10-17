@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscreve-te | ATCV - Taekwondo Costa Verde</title>
+</head>
+<body>
+    <header>
+        <p><a href="index.html">ATCV - Taekwondo Costa Verde</a></p>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+                <li><a href="inscreve-te.html" aria-current="page">Inscreve-te</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Inscreve-te</h1>
+            <p>Vê os horários de treino, escolhe o teu escalão e envia-nos uma mensagem para te inscreveres ou tirares dúvidas.</p>
+        </section>
+
+        <section>
+            <h2>Horário semanal de treinos</h2>
+            <table>
+                <caption>Horário semanal de treinos da ATCV</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Dia</th>
+                        <th scope="col">Horário</th>
+                        <th scope="col">Escalão</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Segunda-feira</td><td>19:00 às 21:00</td><td>Competição</td></tr>
+                    <tr><td>Terça-feira</td><td>19:00 às 20:00</td><td>Juvenis</td></tr>
+                    <tr><td>Terça-feira</td><td>20:00 às 21:30</td><td>Adultos</td></tr>
+                    <tr><td>Quarta-feira</td><td>19:30 às 20:30</td><td>Infantis</td></tr>
+                    <tr><td>Quinta-feira</td><td>19:00 às 20:00</td><td>Juvenis</td></tr>
+                    <tr><td>Quinta-feira</td><td>20:00 às 21:30</td><td>Adultos</td></tr>
+                    <tr><td>Sexta-feira</td><td>19:30 às 20:30</td><td>Infantis</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Envia-nos uma mensagem</h2>
+            <p>Os campos com * são obrigatórios.</p>
+            <form action="#" method="post">
+                <p>
+                    <label for="nome">Nome completo *</label><br>
+                    <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+                </p>
+                <p>
+                    <label for="email">Email *</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </p>
+                <p>
+                    <label for="telefone">Telefone (9 dígitos)</label><br>
+                    <input type="tel" id="telefone" name="telefone" pattern="[0-9]{9}" title="Escreve 9 dígitos, sem espaços" autocomplete="tel">
+                </p>
+                <p>
+                    <label for="idade">Idade do praticante *</label><br>
+                    <input type="number" id="idade" name="idade" min="5" max="99" required>
+                </p>
+                <p>
+                    <label for="escalao">Escalão *</label><br>
+                    <select id="escalao" name="escalao" required>
+                        <option value="">Escolhe uma opção</option>
+                        <option value="infantis">Infantis (8 a 12 anos)</option>
+                        <option value="juvenis">Juvenis (13 a 17 anos)</option>
+                        <option value="adultos">Adultos (18 ou mais anos)</option>
+                    </select>
+                </p>
+                <fieldset>
+                    <legend>Já praticaste taekwondo? *</legend>
+                    <input type="radio" id="exp-sim" name="experiencia" value="sim" required>
+                    <label for="exp-sim">Sim</label>
+                    <input type="radio" id="exp-nao" name="experiencia" value="nao">
+                    <label for="exp-nao">Não</label>
+                </fieldset>
+                <p>
+                    <label for="mensagem">Mensagem *</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40" required minlength="10"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" id="rgpd" name="rgpd" required>
+                    <label for="rgpd">Aceito que a ATCV use estes dados para responder ao meu pedido. *</label>
+                </p>
+                <p><button type="submit">Enviar mensagem</button></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</p>
+        <p>Email: <a href="mailto:atcvinfo@gmail.com">atcvinfo@gmail.com</a></p>
+        <p>
+            <a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> |
+            <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a>
+        </p>
+        <p>&copy; 2026 ATCV - Taekwondo Costa Verde</p>
+    </footer>
+</body>
+</html>
