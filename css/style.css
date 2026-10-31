@@ -1,51 +1,109 @@
 /* ATCV - Taekwondo Costa Verde
-   Folha de estilos base (versão inicial, será melhorada nas próximas entregas) */
+   Folha de estilos (E4: modelo de caixa, espaçamentos, tabelas, formulários e foco)
 
-/* Base */
+   Paleta extraída do logótipo:
+   noite #27014F | índigo #4C018B | ação #6502AC | energia #A51BEC
+   borda #5C265C | branco #ffffff | superfície #f5ecfc | página #f6f0fa
+   verde bandeira #046A38 | vermelho bandeira #DA291C (só na faixa decorativa)
+
+   Escala de espaçamentos (em rem): 0.5 | 1 | 1.5 | 2 */
+
+:root {
+    --cor-noite: #27014F;
+    --cor-indigo: #4C018B;
+    --cor-acao: #6502AC;
+    --cor-energia: #A51BEC;
+    --cor-borda: #5C265C;
+    --cor-branco: #ffffff;
+    --cor-superficie: #f5ecfc;
+    --cor-pagina: #f6f0fa;
+    --cor-verde: #046A38;
+    --cor-vermelho: #DA291C;
+}
+
+/* ---------- 1. BASE E MODELO DE CAIXA ---------- */
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background-color: #ffffff;
+    color: var(--cor-noite);
+    background-color: var(--cor-pagina);
 }
 
 img {
+    display: block;
     max-width: 100%;
     height: auto;
+    margin: 0 0 1rem 0;
+    border-radius: 0.5rem;
 }
 
 a {
-    color: #b71c1c;
+    color: var(--cor-acao);
 }
 
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 3px solid #1a1a1a;
-    outline-offset: 2px;
+a:hover {
+    color: var(--cor-indigo);
 }
 
-/* Cabeçalho e navegação */
+/* ---------- 2. ESPAÇAMENTOS COMUNS A TODAS AS PÁGINAS ---------- */
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+table,
+figure,
+fieldset,
+details {
+    margin: 0 0 1rem 0;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ---------- 3. CABEÇALHO E NAVEGAÇÃO ---------- */
 header {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 1rem;
+    background-color: var(--cor-noite);
+    color: var(--cor-branco);
+    padding: 1.5rem 1rem 1rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, var(--cor-verde) 40%, var(--cor-vermelho) 40%) 1;
 }
 
 header a {
-    color: #ffffff;
+    color: var(--cor-branco);
+}
+
+header a:hover {
+    color: var(--cor-branco);
 }
 
 header > p {
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 1rem 0;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+header > p a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+    max-width: 6.5rem;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--cor-branco);
 }
 
 nav ul {
@@ -54,35 +112,120 @@ nav ul {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+nav a:hover {
+    background-color: var(--cor-indigo);
 }
 
 nav a[aria-current="page"] {
     font-weight: bold;
-    text-decoration: underline;
+    background-color: var(--cor-acao);
+    text-decoration: none;
 }
 
-/* Conteúdo */
+/* ---------- 4. CONTEÚDO ---------- */
 main {
     max-width: 900px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem 1rem;
 }
 
 h1 {
-    color: #b71c1c;
+    color: var(--cor-indigo);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 h2 {
-    border-bottom: 3px solid #b71c1c;
-    padding-bottom: 0.25rem;
-    margin-top: 2rem;
+    color: var(--cor-indigo);
+    border-left: 4px solid var(--cor-energia);
+    padding-left: 0.75rem;
 }
 
-/* Tabela de horários */
+h3 {
+    color: var(--cor-acao);
+}
+
+/* Cartões (notícias e serviços) */
+article {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: var(--cor-branco);
+    border-radius: 0.75rem;
+    border: 1px solid #e8d6f5;
+}
+
+article h2 {
+    border-left: none;
+    padding-left: 0;
+}
+
+/* Botão de destaque (ex.: Inscreve-te agora) */
+.botao {
+    display: inline-block;
+    background-color: var(--cor-acao);
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+
+.botao:hover {
+    background-color: var(--cor-indigo);
+    color: var(--cor-branco);
+}
+
+/* ---------- 5. ELEMENTOS HTML5 NOVOS ---------- */
+figure img,
+figure iframe {
+    margin-bottom: 0.5rem;
+}
+
+figcaption {
+    font-size: 0.9rem;
+}
+
+time {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--cor-acao);
+}
+
+address {
+    display: inline;
+    font-style: normal;
+}
+
+details {
+    padding: 0.5rem 1rem;
+    background-color: var(--cor-branco);
+    border: 1px solid #e8d6f5;
+    border-radius: 0.5rem;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ---------- 6. TABELA ---------- */
 table {
     border-collapse: collapse;
     width: 100%;
+    background-color: var(--cor-branco);
+    border-radius: 0.5rem;
+    overflow: hidden;
 }
 
 caption {
@@ -93,47 +236,138 @@ caption {
 
 th,
 td {
-    border: 1px solid #999999;
-    padding: 0.5rem;
+    border-bottom: 1px solid #e8d6f5;
+    padding: 0.75rem 1rem;
     text-align: left;
 }
 
 th {
-    background-color: #b71c1c;
-    color: #ffffff;
+    background-color: var(--cor-indigo);
+    color: var(--cor-branco);
+    border-bottom: none;
 }
 
-/* Formulário */
+tbody tr:nth-child(even) {
+    background-color: var(--cor-superficie);
+}
+
+tbody tr:hover {
+    background-color: #efe3f8;
+}
+
+/* ---------- 7. FORMULÁRIO ---------- */
+label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+}
+
 input,
+select,
 textarea {
     width: 100%;
     max-width: 450px;
-    padding: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: 0.4rem;
     font-family: inherit;
     font-size: 1rem;
+    background-color: var(--cor-branco);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+fieldset {
+    max-width: 450px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--cor-borda);
+    border-radius: 0.4rem;
+    background-color: var(--cor-branco);
+}
+
+legend {
+    padding: 0 0.25rem;
+    font-weight: 600;
 }
 
 button {
-    background-color: #b71c1c;
-    color: #ffffff;
+    background-color: var(--cor-acao);
+    color: var(--cor-branco);
     border: none;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.4rem;
     font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    background-color: var(--cor-indigo);
 }
 
 iframe {
     max-width: 100%;
+    width: 100%;
+    border: 0;
+    border-radius: 0.75rem;
 }
 
-/* Rodapé */
+/* ---------- 8. RODAPÉ ---------- */
 footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    padding: 1rem;
+    background-color: var(--cor-noite);
+    color: var(--cor-branco);
+    padding: 2rem 1rem;
     text-align: center;
 }
 
+footer p,
+footer address {
+    display: block;
+    margin: 0 0 0.5rem 0;
+    font-style: normal;
+}
+
 footer a {
-    color: #ffffff;
+    color: var(--cor-branco);
+}
+
+footer a:hover {
+    color: #e4c8ff;
+}
+
+/* ---------- 9. FOCO VISÍVEL COM O TECLADO ---------- */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+summary:focus,
+iframe:focus {
+    outline: 3px solid var(--cor-noite);
+    outline-offset: 2px;
+}
+
+header a:focus,
+footer a:focus {
+    outline-color: var(--cor-branco);
+}
+
+/* ---------- 10. LIGAÇÃO "SALTAR PARA O CONTEÚDO" (opcional) ---------- */
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -4rem;
+    z-index: 1;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--cor-branco);
+    color: var(--cor-noite);
+    font-weight: bold;
+}
+
+.skip-link:focus {
+    top: 1rem;
 }

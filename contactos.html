@@ -7,8 +7,13 @@
     <title>Contactos | ATCV - Taekwondo Costa Verde</title>
 </head>
 <body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
     <header>
-        <p><a href="index.html">ATCV - Taekwondo Costa Verde</a></p>
+        <p>
+            <a href="index.html">
+                <img src="assets/logotipo.jpg" alt="" width="104" height="104">
+            </a>
+        </p>
         <nav aria-label="Menu principal">
             <ul>
                 <li><a href="index.html">Início</a></li>
@@ -20,32 +25,56 @@
         </nav>
     </header>
 
-    <main>
+    <main id="conteudo">
         <section>
             <h1>Contactos</h1>
             <p>Entra em contacto connosco. Estamos aqui para ajudar!</p>
-            <p>Se quiseres inscrever-te ou enviar uma mensagem, vai à página <a href="inscreve-te.html">Inscreve-te</a>.</p>
+            <p>Se quiseres inscrever-te, vai à página <a href="inscreve-te.html">Inscreve-te</a>.</p>
+        </section>
+
+        <section>
+            <h2>Envia-nos uma mensagem</h2>
+            <p>Os campos com * são obrigatórios.</p>
+            <form action="#" method="post">
+                <p>
+                    <label for="nome">Nome *</label><br>
+                    <input type="text" id="nome" name="nome" required minlength="3" autocomplete="name">
+                </p>
+                <p>
+                    <label for="email">Email *</label><br>
+                    <input type="email" id="email" name="email" required autocomplete="email">
+                </p>
+                <p>
+                    <label for="mensagem">Mensagem *</label><br>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="40" required minlength="10"></textarea>
+                </p>
+                <p><button type="submit">Enviar mensagem</button></p>
+            </form>
         </section>
 
         <section>
             <h2>Informações de contacto</h2>
             <ul>
                 <li>Telefone: <a href="tel:+351999999999">+351 999 999 999</a></li>
-                <li>Email: <a href="mailto:atcvinfo@gmail.com">atcvinfo@gmail.com</a></li>
-                <li>Morada: Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</li>
+                <li>Email: <a href="mailto:treinotkd@icloud.com">treinotkd@icloud.com</a></li>
+                <li>Morada: <address>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</address></li>
                 <li>Redes sociais: <a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> e <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a></li>
             </ul>
         </section>
 
         <section>
             <h2>Localização</h2>
-            <iframe src="https://maps.google.com/maps?q=41.1120679,-8.6362387&amp;z=17&amp;output=embed" title="Mapa com a localização da ATCV, em Vila Nova de Gaia" width="500" height="300"></iframe>
+            <figure>
+                <iframe src="https://maps.google.com/maps?q=41.1120679,-8.6362387&amp;z=17&amp;output=embed" title="Mapa com a localização da ATCV, em Vila Nova de Gaia" width="500" height="300"></iframe>
+                <figcaption>Ginásio da ATCV em Vila Nova de Gaia.</figcaption>
+            </figure>
+            <p><a href="#rodape">Saltar o mapa</a></p>
         </section>
     </main>
 
-    <footer>
-        <p>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</p>
-        <p>Email: <a href="mailto:atcvinfo@gmail.com">atcvinfo@gmail.com</a></p>
+    <footer id="rodape">
+        <address>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</address>
+        <p>Email: <a href="mailto:treinotkd@icloud.com">treinotkd@icloud.com</a></p>
         <p>
             <a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> |
             <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a>
