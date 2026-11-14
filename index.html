@@ -3,61 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
     <title>Início | ATCV - Taekwondo Costa Verde</title>
 </head>
 <body>
     <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
     <header>
-        <p>
-            <a href="index.html">
-                <img src="assets/logotipo.jpg" alt="ATCV - Taekwondo Costa Verde, página inicial" width="104" height="104">
-            </a>
-        </p>
-        <nav aria-label="Menu principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Início</a></li>
-                <li><a href="servicos.html">Serviços</a></li>
-                <li><a href="noticias.html">Notícias</a></li>
-                <li><a href="contactos.html">Contactos</a></li>
-                <li><a href="inscreve-te.html">Inscreve-te</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-atcv" data-bs-theme="dark" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logotipo.jpg" alt="ATCV - Taekwondo Costa Verde, página inicial" width="64" height="64">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-lg-2"><li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Início</a></li><li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li><li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li><li class="nav-item"><a class="nav-link" href="inscreve-te.html">Inscreve-te</a></li></ul>
+                </div>
+            </div>
         </nav>
     </header>
 
-    <main id="conteudo">
-        <section>
+    <main id="conteudo" class="container py-4 py-lg-5">
+        <section class="mb-5">
             <h1>ATCV - Taekwondo Costa Verde</h1>
-            <figure>
-                <img src="assets/hero-grupo.jpg" alt="Grupo de atletas e treinadores da ATCV reunidos após uma competição" width="600">
-                <figcaption>Equipa da ATCV após uma competição.</figcaption>
-            </figure>
-            <p>Descobre a arte marcial que combina disciplina, respeito e força. Junta-te à nossa comunidade e transforma o teu corpo e mente.</p>
-            <p><a class="botao" href="inscreve-te.html">Inscreve-te agora</a></p>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-7">
+                    <figure class="mb-0">
+                        <img src="assets/hero-grupo.jpg" class="img-fluid rounded" alt="Grupo de atletas e treinadores da ATCV reunidos após uma competição" width="600">
+                        <figcaption>Equipa da ATCV após uma competição.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-5">
+                    <p>Descobre a arte marcial que combina disciplina, respeito e força. Junta-te à nossa comunidade e transforma o teu corpo e mente.</p>
+                    <a class="btn btn-primary btn-lg" href="inscreve-te.html">Inscreve-te agora</a>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section class="mb-5">
             <h2>Sobre nós</h2>
-            <figure>
-                <img src="assets/sobre-atletas.png" loading="lazy" alt="Atletas de taekwondo a treinar no clube ATCV" width="400">
-                <figcaption>Treino de taekwondo no ginásio da ATCV.</figcaption>
-            </figure>
-            <p>A ATCV - Taekwondo Costa Verde é um clube desportivo dedicado ao ensino e prática do taekwondo, uma arte marcial coreana reconhecida mundialmente pela sua técnica, disciplina e valores.</p>
-            <p>O clube acolhe praticantes de todas as idades e níveis de experiência. Na ATCV, o taekwondo é mais do que um desporto: é uma filosofia de vida que ensina respeito, disciplina, perseverança e autocontrolo.</p>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5">
+                    <figure class="mb-0">
+                        <img src="assets/sobre-atletas.png" class="img-fluid rounded" loading="lazy" alt="Atletas de taekwondo a treinar no clube ATCV" width="400">
+                        <figcaption>Treino de taekwondo no ginásio da ATCV.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-7">
+                    <p>A ATCV - Taekwondo Costa Verde é um clube desportivo dedicado ao ensino e prática do taekwondo, uma arte marcial coreana reconhecida mundialmente pela sua técnica, disciplina e valores.</p>
+                    <p>O clube acolhe praticantes de todas as idades e níveis de experiência. Na ATCV, o taekwondo é mais do que um desporto: é uma filosofia de vida que ensina respeito, disciplina, perseverança e autocontrolo.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section class="mb-5">
             <h2>Resultados dos atletas</h2>
-            <figure>
-                <img src="assets/resultados-atletas.png" loading="lazy" alt="Atletas da ATCV em competição" width="400">
-                <figcaption>Atletas da ATCV em competição.</figcaption>
-            </figure>
-            <p>Os nossos atletas representam o clube com dedicação e espírito de superação em cada competição.</p>
-            <ul>
-                <li>Mais de 15 anos de história</li>
-                <li>Mais de 200 atletas ativos</li>
-                <li>Mais de 50 medalhas</li>
-            </ul>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-5 order-md-2">
+                    <figure class="mb-0">
+                        <img src="assets/resultados-atletas.png" class="img-fluid rounded" loading="lazy" alt="Atletas da ATCV em competição" width="400">
+                        <figcaption>Atletas da ATCV em competição.</figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-7 order-md-1">
+                    <p>Os nossos atletas representam o clube com dedicação e espírito de superação em cada competição.</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">Mais de 15 anos de história</li>
+                        <li class="list-group-item">Mais de 200 atletas ativos</li>
+                        <li class="list-group-item">Mais de 50 medalhas</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section>
@@ -69,14 +87,13 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer-atcv text-center py-4">
         <address>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</address>
         <p>Email: <a href="mailto:treinotkd@icloud.com">treinotkd@icloud.com</a></p>
-        <p>
-            <a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> |
-            <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a>
-        </p>
-        <p>&copy; 2026 ATCV - Taekwondo Costa Verde</p>
+        <p><a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> | <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a></p>
+        <p class="mb-0">&copy; 2026 ATCV - Taekwondo Costa Verde</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
