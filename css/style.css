@@ -1,84 +1,169 @@
 /* ATCV - personalizações do Bootstrap 5.3.8 (o código da framework não é alterado).
    Carregar DEPOIS do bootstrap.min.css. */
-
-/* 1. Paleta ATCV nas variáveis do Bootstrap */
 :root {
+    --cor-noite: #27014F;
+    --cor-indigo: #4C018B;
+    --cor-acao: #6502AC;
+    --cor-energia: #A51BEC;
+    --cor-borda: #5C265C;
+    --cor-branco: #ffffff;
+    --cor-superficie: #f5ecfc;
+    --cor-pagina: #f6f0fa;
+    --cor-verde: #046A38;
+    --cor-vermelho: #DA291C;
+
+    /* 1. Variáveis do Bootstrap com a paleta ATCV */
     --bs-primary: #6502AC;
     --bs-primary-rgb: 101, 2, 172;
     --bs-body-color: #27014F;
     --bs-body-bg: #f6f0fa;
-    --bs-link-color-rgb: 101, 2, 172;
-    --bs-link-hover-color-rgb: 76, 1, 139;
-    --bs-font-sans-serif: "Segoe UI", Arial, Helvetica, sans-serif;
     --bs-body-line-height: 1.6;
+    --bs-font-sans-serif: "Segoe UI", Arial, Helvetica, sans-serif;
 }
 
-/* 2. Navbar: fundo escuro e separador verde/vermelho */
-.navbar-atcv {
-    background-color: #27014F;
+/* ---------- Base ---------- */
+body { overflow-wrap: break-word; }
+img { display: block; max-width: 100%; height: auto; margin: 0 0 16px 0; border-radius: 8px; }
+a { color: var(--cor-acao); }
+a:hover { color: var(--cor-indigo); }
+h1, h2, h3, p, ul, ol, table, figure, fieldset { margin: 0 0 16px 0; }
+h1, h2, h3 { font-weight: 700; line-height: inherit; }
+section { margin-bottom: 32px; }
+
+/* ---------- 2. Cabeçalho e Navbar ---------- */
+header {
+    background-color: var(--cor-noite);
+    color: var(--cor-branco);
+    padding: 24px 16px 16px 16px;
+    text-align: center;
     border-bottom: 4px solid;
-    border-image: linear-gradient(to right, #046A38 40%, #DA291C 40%) 1;
+    border-image: linear-gradient(to right, var(--cor-verde) 40%, var(--cor-vermelho) 40%) 1;
 }
-.navbar-atcv .nav-link { color: #fff; border-radius: 32px; padding: .5rem 1rem; }
-.navbar-atcv .nav-link:hover { background-color: #4C018B; color: #fff; }
-
-/* 3. Link ativo da navbar */
-.navbar-atcv .nav-link.active { background-color: #6502AC; font-weight: bold; color: #fff; }
-
-/* 4. Logótipo redondo com borda branca */
-.navbar-brand img { border-radius: 50%; border: 3px solid #fff; }
-
-/* 5. Botão primário */
-.btn-primary {
-    --bs-btn-bg: #6502AC; --bs-btn-border-color: #6502AC;
-    --bs-btn-hover-bg: #4C018B; --bs-btn-hover-border-color: #4C018B;
-    --bs-btn-active-bg: #4C018B; --bs-btn-active-border-color: #4C018B;
-    --bs-btn-focus-shadow-rgb: 101, 2, 172;
-    border-radius: 8px; font-weight: 600;
+header a { color: var(--cor-branco); }
+header > p { margin: 0 0 16px 0; }
+header > p a { display: inline-block; text-decoration: none; }
+header img { margin: 0 auto; max-width: 104px; border-radius: 50%; border: 3px solid var(--cor-branco); }
+.navbar-nav {
+    --bs-nav-link-padding-x: 16px;
+    --bs-nav-link-padding-y: 8px;
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: #fff;
 }
+.navbar .nav-link { color: #fff; border-radius: 32px; text-decoration: none; }
+.navbar .nav-link:hover { background-color: var(--cor-indigo); color: #fff; }
+.navbar .nav-link.active { font-weight: bold; background-color: var(--cor-acao); color: #fff; }
 
-/* 6. Cards arredondados com borda lilás */
-.card { border-radius: 12px; border-color: #e8d6f5; }
-.card-title { color: #6502AC; }
-
-/* 7. Cabeçalho da tabela */
-.table > thead > tr > th { background-color: #4C018B; color: #fff; border-bottom: 0; }
-.table caption { color: #27014F; font-weight: bold; }
-
-/* 8. Títulos */
-h1, h2 { color: #4C018B; }
-main h2 { border-left: 4px solid #A51BEC; padding-left: 12px; margin-bottom: 1rem; }
-main .card h2 { border-left: 0; padding-left: 0; }
-
-/* 9. Acordeão e campos de formulário */
-.accordion-button:not(.collapsed) { background-color: #f5ecfc; color: #4C018B; }
-.accordion-button:focus, .form-control:focus, .form-select:focus {
-    border-color: #6502AC; box-shadow: 0 0 0 .25rem rgba(101, 2, 172, .35);
-}
-.form-control, .form-select { border: 2px solid #5C265C; }
-.form-check-input:checked { background-color: #6502AC; border-color: #6502AC; }
-
-/* Elementos próprios do site */
+/* ---------- Conteúdo ---------- */
+main.container { --bs-gutter-x: 32px; max-width: 900px; padding-top: 32px; padding-bottom: 32px; }
+h1 { color: var(--cor-indigo); font-size: 2rem; margin-bottom: 24px; }
+h2 { color: var(--cor-indigo); font-size: 1.5rem; border-left: 4px solid var(--cor-energia); padding-left: 12px; }
+h3 { color: var(--cor-acao); font-size: 1.17rem; }
+figcaption { font-size: 0.9rem; }
+time { font-size: 0.9rem; font-weight: 600; color: var(--cor-acao); }
 address { display: inline; font-style: normal; }
-figcaption { font-size: .9rem; }
-time { font-size: .9rem; font-weight: 600; color: #6502AC; }
-main li a, .salto { display: inline-block; padding: 4px 8px; }
 
-/* Rodapé */
-.footer-atcv { background-color: #27014F; color: #fff; }
-.footer-atcv address, .footer-atcv p { display: block; margin: 0 0 .5rem; }
-.footer-atcv a { color: #fff; display: inline-block; padding: 4px 8px; }
-.footer-atcv a:hover { color: #e4c8ff; }
-
-/* Foco visível */
-a:focus-visible, button:focus-visible, summary:focus-visible, iframe:focus-visible {
-    outline: 3px solid #27014F; outline-offset: 2px;
+/* 3. Cards */
+.card {
+    --bs-card-spacer-x: 24px;
+    --bs-card-spacer-y: 24px;
+    --bs-card-border-color: #e8d6f5;
+    --bs-card-border-radius: 12px;
+    --bs-card-bg: var(--cor-branco);
 }
-.navbar-atcv a:focus-visible, .navbar-atcv button:focus-visible, .footer-atcv a:focus-visible { outline-color: #fff; }
+.card h2 { border-left: none; padding-left: 0; font-size: 1.5rem; color: var(--cor-indigo); }
+.card .card-title { margin-bottom: 16px; }
+.card h3.card-title { color: var(--cor-acao); }
 
-/* Ligação "Saltar para o conteúdo" */
-.skip-link {
-    position: absolute; left: 16px; top: -64px; z-index: 2000;
-    padding: 12px 20px; background-color: #fff; color: #27014F; font-weight: bold;
+/* 4. Botões */
+.btn-primary {
+    --bs-btn-bg: var(--cor-acao);
+    --bs-btn-border-color: var(--cor-acao);
+    --bs-btn-hover-bg: var(--cor-indigo);
+    --bs-btn-hover-border-color: var(--cor-indigo);
+    --bs-btn-active-bg: var(--cor-indigo);
+    --bs-btn-active-border-color: var(--cor-indigo);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-border-radius: 8px;
+    --bs-btn-padding-x: 20px;
+    --bs-btn-padding-y: 10px;
+    font-weight: 600;
 }
+
+/* 5. Acordeão (aspeto dos antigos details) */
+.accordion {
+    --bs-accordion-bg: var(--cor-branco);
+    --bs-accordion-color: var(--cor-noite);
+    --bs-accordion-border-color: #e8d6f5;
+    --bs-accordion-border-radius: 8px;
+    --bs-accordion-btn-color: var(--cor-noite);
+    --bs-accordion-active-bg: var(--cor-superficie);
+    --bs-accordion-active-color: var(--cor-indigo);
+    --bs-accordion-btn-focus-box-shadow: none;
+    margin-bottom: 16px;
+}
+.accordion-header { margin: 0; font-size: 1rem; }
+.accordion-button { font-weight: 600; }
+
+/* 6. Tabela */
+.table {
+    --bs-table-bg: var(--cor-branco);
+    --bs-table-striped-bg: var(--cor-superficie);
+    --bs-table-hover-bg: #efe3f8;
+    --bs-table-border-color: #e8d6f5;
+    --bs-table-color: var(--cor-noite);
+}
+.table > :not(caption) > * > * { padding: 12px 8px; }
+.table > thead > tr > th { background-color: var(--cor-indigo); color: var(--cor-branco); border-bottom: none; }
+caption { caption-side: top; color: inherit; text-align: left; font-weight: bold; padding: 0 0 8px 0; }
+
+/* 7. Formulário */
+label { display: inline-block; margin-bottom: 4px; font-weight: 600; }
+.form-control, .form-select {
+    max-width: 450px;
+    padding: 10px 12px;
+    border: 2px solid var(--cor-borda);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: var(--cor-branco);
+}
+.form-check { padding-left: 32px; }
+.form-check-input { width: 24px; height: 24px; margin-left: -32px; margin-top: 0; }
+.form-check-input:checked { background-color: var(--cor-acao); border-color: var(--cor-acao); }
+.form-check-label { margin-bottom: 0; }
+fieldset { min-width: 0; max-width: 450px; padding: 8px 16px; border: 2px solid var(--cor-borda); border-radius: 6px; background-color: var(--cor-branco); }
+legend { float: none; width: auto; padding: 0 4px; margin: 0; font-size: 1rem; font-weight: 600; }
+iframe { width: 100%; max-width: 100%; height: 300px; border: 0; border-radius: 12px; }
+
+/* ---------- Rodapé ---------- */
+footer { background-color: var(--cor-noite); color: var(--cor-branco); padding: 32px 16px; text-align: center; }
+footer p, footer address { display: block; margin: 0 0 8px 0; font-style: normal; }
+footer a { color: var(--cor-branco); }
+footer a:hover { color: #e4c8ff; }
+
+/* Alvos de toque (mínimo 24 x 24 px) */
+footer a, main li a, .salto { display: inline-block; padding: 4px 8px; }
+
+/* ---------- Foco visível ---------- */
+a:focus, .btn:focus, .btn:focus-visible, .form-control:focus, .form-select:focus,
+.form-check-input:focus, .accordion-button:focus, .navbar-toggler:focus, iframe:focus {
+    outline: 3px solid var(--cor-noite);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+header a:focus, footer a:focus, .navbar-toggler:focus { outline-color: var(--cor-branco); }
+
+/* ---------- Ligação "Saltar para o conteúdo" ---------- */
+.skip-link { position: absolute; left: 16px; top: -64px; z-index: 2000; padding: 12px 20px; background-color: var(--cor-branco); color: var(--cor-noite); font-weight: bold; }
 .skip-link:focus { top: 16px; }
+
+/* ---------- Responsivo (complementa os breakpoints do Bootstrap) ---------- */
+@media (min-width: 576px) {
+    .table > :not(caption) > * > * { padding: 12px 16px; }
+}
+@media (min-width: 992px) {
+    header { padding: 16px 32px; }
+    header > p { margin: 10px; }
+    h1 { font-size: 2.5rem; }
+    main.container { padding-top: 48px; padding-bottom: 48px; }
+}
