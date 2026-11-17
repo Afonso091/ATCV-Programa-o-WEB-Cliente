@@ -120,7 +120,7 @@ caption { caption-side: top; color: inherit; text-align: left; font-weight: bold
 /* 7. Formulário */
 label { display: inline-block; margin-bottom: 4px; font-weight: 600; }
 .form-control, .form-select {
-    max-width: 450px;
+    
     padding: 10px 12px;
     border: 2px solid var(--cor-borda);
     border-radius: 6px;
@@ -132,7 +132,7 @@ label { display: inline-block; margin-bottom: 4px; font-weight: 600; }
 .form-check-input:checked { background-color: var(--cor-acao); border-color: var(--cor-acao); }
 .form-check-label { margin-bottom: 0; }
 label.form-check-label { margin-left: 8px; }
-fieldset { min-width: 0; max-width: 450px; padding: 8px 16px; border: 2px solid var(--cor-borda); border-radius: 6px; background-color: var(--cor-branco); }
+fieldset { min-width: 0; padding: 8px 16px; border: 2px solid var(--cor-borda); border-radius: 6px; background-color: var(--cor-branco); }
 legend { float: none; width: auto; padding: 0 4px; margin: 0; font-size: 1rem; font-weight: 600; }
 iframe { width: 100%; max-width: 100%; height: 300px; border: 0; border-radius: 12px; }
 
