@@ -17,7 +17,7 @@ Programação Web - Cliente, ISLA Gaia. Docente: José Augusto de Araújo Montei
 - **Bootstrap 5.3.8** (CSS e JavaScript `bundle`), carregado por CDN (jsDelivr) com a versão fixada:
   - `https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css`
   - `https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js`
-- O código da framework não foi alterado. Todas as personalizações estão em `css/custom.css`, carregado depois do Bootstrap.
+- O código da framework não foi alterado. Todas as personalizações estão em `css/style.css`, carregado depois do Bootstrap.
 
 ### Componentes Bootstrap integrados
 1. **Navbar** com menu recolhível em ecrãs pequenos (todas as páginas)
@@ -49,7 +49,7 @@ Programação Web - Cliente, ISLA Gaia. Docente: José Augusto de Araújo Montei
 ## Estrutura
 ```
 index.html, servicos.html, noticias.html, contactos.html, inscreve-te.html
-css/custom.css
+css/style.css
 assets/   (imagens)
 README.md
 ```
