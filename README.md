@@ -27,7 +27,7 @@ Programação Web - Cliente, ISLA Gaia. Docente: José Augusto de Araújo Montei
 5. **Form controls** e **Buttons** (`contactos.html`, `inscreve-te.html`, botões em `index.html`)
 6. **List group** (`index.html`) e **Ratio** para o mapa (`contactos.html`)
 
-### Personalizações (`css/custom.css`)
+### Personalizações (`css/style.css`)
 1. Paleta ATCV nas variáveis CSS do Bootstrap (cores, fonte, fundo)
 2. Navbar com fundo escuro e separador verde/vermelho
 3. Estilo do link ativo da navbar
