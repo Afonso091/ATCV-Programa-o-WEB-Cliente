@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Comparação de frameworks | ATCV - Taekwondo Costa Verde</title>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-atcv" data-bs-theme="dark" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logotipo.jpg" alt="ATCV - Taekwondo Costa Verde, página inicial" width="64" height="64">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto gap-lg-2"><li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li><li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li><li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li><li class="nav-item"><a class="nav-link" href="inscreve-te.html">Inscreve-te</a></li><li class="nav-item"><a class="nav-link active" href="comparacao.html" aria-current="page">Comparação</a></li></ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="container py-4 py-lg-5">
+        <section>
+            <h1>Comparação de frameworks</h1>
+            <p>Construímos o mesmo componente, um <strong>card de notícia</strong>, com Bootstrap, Foundation e W3.CSS. Cada versão está num ficheiro à parte (pasta <code>demos</code>), para uma framework não afetar as outras.</p>
+        </section>
+
+        <section>
+            <h2>O mesmo card, três frameworks</h2>
+            <div class="row row-cols-1 row-cols-lg-3 g-4">
+                <div class="col">
+                    <section>
+                        <h3>Bootstrap</h3>
+                        <iframe src="demos/card-bootstrap.html" title="Card feito com Bootstrap" height="440" style="height:440px" loading="lazy"></iframe>
+                        <p><a href="demos/card-bootstrap.html">Abrir o card de Bootstrap sozinho</a> (19 linhas de HTML)</p>
+                    </section>
+                </div>
+                <div class="col">
+                    <section>
+                        <h3>Foundation</h3>
+                        <iframe src="demos/card-foundation.html" title="Card feito com Foundation" height="440" style="height:440px" loading="lazy"></iframe>
+                        <p><a href="demos/card-foundation.html">Abrir o card de Foundation sozinho</a> (19 linhas de HTML)</p>
+                    </section>
+                </div>
+                <div class="col">
+                    <section>
+                        <h3>W3.CSS</h3>
+                        <iframe src="demos/card-w3css.html" title="Card feito com W3.CSS" height="440" style="height:440px" loading="lazy"></iframe>
+                        <p><a href="demos/card-w3css.html">Abrir o card de W3.CSS sozinho</a> (19 linhas de HTML)</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tabela comparativa</h2>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <caption>Critérios medidos para o card (Bootstrap 5.3.8, Foundation 6.9.0, W3.CSS 4)</caption>
+                    <thead><tr><th scope="col">Critério</th><th scope="col">Bootstrap</th><th scope="col">Foundation</th><th scope="col">W3.CSS</th></tr></thead>
+                    <tbody>
+                    <tr><th scope="row">CSS (KB, sem compressão)</th><td>≈ 232</td><td>≈ 140</td><td>≈ 23</td></tr>
+                    <tr><th scope="row">CSS (KB, transferidos com gzip)</th><td>≈ 31</td><td>≈ 19</td><td>≈ 5</td></tr>
+                    <tr><th scope="row">Linhas de código do card (HTML)</th><td>19</td><td>19</td><td>19</td></tr>
+                    <tr><th scope="row">Documentação (1 a 5)</th><td>5</td><td>4</td><td>3</td></tr>
+                    <tr><th scope="row">Personalização (1 a 5)</th><td>5</td><td>4</td><td>2</td></tr>
+                    <tr><th scope="row">Acessibilidade por defeito (1 a 5)</th><td>4</td><td>4</td><td>2</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Os valores com ≈ são de referência e devem ser confirmados com a medição do grupo (ver abaixo).</p>
+        </section>
+
+        <section>
+            <h2>Como medimos</h2>
+            <ul>
+                <li><strong>KB:</strong> abrir cada ficheiro de <code>demos</code> sozinho, DevTools, separador Rede, desativar a cache, recarregar e ler a linha do ficheiro <code>.css</code> da framework: <em>Size</em> (transferido, com gzip) e <em>Content</em> (sem compressão). As imagens são iguais nas três e não contam.</li>
+                <li><strong>Linhas de código:</strong> contagem das linhas de cada ficheiro <code>demos/card-*.html</code> (<code>wc -l</code>). Todos têm o mesmo cabeçalho; só muda o card.</li>
+                <li><strong>Documentação, personalização e acessibilidade (1 a 5):</strong> avaliação do grupo. Documentação: exemplos com código, pesquisa e guia de início. Personalização: variáveis CSS, Sass ou só sobreposição de CSS. Acessibilidade: ARIA, foco e teclado nos componentes sem código extra.</li>
+            </ul>
+            <p>A decisão final está em <a href="docs/decisao-framework.md">docs/decisao-framework.md</a>.</p>
+        </section>
+    </main>
+
+    <footer class="footer-atcv text-center py-4">
+        <address>Av. Gomes Júnior 284, 4405-750 Vila Nova de Gaia</address>
+        <p>Email: <a href="mailto:treinotkd@icloud.com">treinotkd@icloud.com</a></p>
+        <p><a href="https://www.facebook.com/atcv.costaverde.1">Facebook</a> | <a href="https://www.instagram.com/atcv_tkdcostaverde_por/">Instagram</a></p>
+        <p class="mb-0">&copy; 2026 ATCV - Taekwondo Costa Verde</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
