@@ -28,7 +28,7 @@
     <main id="conteudo" class="container py-4 py-lg-5">
         <section>
             <h1>Comparação de frameworks</h1>
-            <p>Construímos o mesmo componente, um <strong>card de notícia</strong>, com Bootstrap, Foundation e W3.CSS. Cada versão está num ficheiro à parte (pasta <code>demos</code>), para uma framework não afetar as outras.</p>
+            <p>Construímos o mesmo componente, um <strong>card de notícia</strong>, com Bootstrap, Foundation e W3.CSS.</p>
         </section>
 
         <section>
@@ -81,7 +81,7 @@
             <h2>Como medimos</h2>
             <ul>
                 <li><strong>KB:</strong> abrir cada ficheiro de <code>demos</code> sozinho, DevTools, separador Rede, desativar a cache, recarregar e ler a linha do ficheiro <code>.css</code> da framework: <em>Size</em> (transferido, com gzip) e <em>Content</em> (sem compressão). As imagens são iguais nas três e não contam.</li>
-                <li><strong>Linhas de código:</strong> contagem das linhas de cada ficheiro <code>demos/card-*.html</code> (<code>wc -l</code>). Todos têm o mesmo cabeçalho; só muda o card.</li>
+                <li><strong>Linhas de código:</strong> contagem das linhas de cada ficheiro card-*.html</code> (<code>wc -l</code>). Todos têm o mesmo cabeçalho; só muda o card.</li>
                 <li><strong>Documentação, personalização e acessibilidade (1 a 5):</strong> avaliação do grupo. Documentação: exemplos com código, pesquisa e guia de início. Personalização: variáveis CSS, Sass ou só sobreposição de CSS. Acessibilidade: ARIA, foco e teclado nos componentes sem código extra.</li>
             </ul>
             <p>A decisão final está em <a href="docs/decisao-framework.md">docs/decisao-framework.md</a>.</p>
